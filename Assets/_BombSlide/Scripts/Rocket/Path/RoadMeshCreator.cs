@@ -30,6 +30,11 @@ namespace PathCreation.Examples {
             }
         }
 
+        private void Start()
+        {
+            PathUpdated();
+        }
+
         void CreateRoadMesh () {
             Vector3[] verts = new Vector3[path.NumPoints * 8];
             Vector2[] uvs = new Vector2[verts.Length];

@@ -8,6 +8,7 @@ public class PathMover : MonoBehaviour
 
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private PathCreator _path;
+    [SerializeField] private float _startOffset;
     [SerializeField] private float _yOffset;
     [SerializeField] private float _pathSpeed;
     [SerializeField] private AnimationCurve _movingCurve;
@@ -15,9 +16,16 @@ public class PathMover : MonoBehaviour
     private float _currentDistance;
     private bool _isMoving;
 
+    public PathCreator Path => _path;
+
+    public void PlaceAtStart()
+    {
+        SetPositionByDistance(_startOffset);
+    }
+
     public void StartMove()
     {
-        _currentDistance = 0f;
+        _currentDistance = _startOffset;
         _isMoving = true;
         SetPositionByDistance(_currentDistance);
     }
