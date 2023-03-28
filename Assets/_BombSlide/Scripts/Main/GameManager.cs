@@ -6,13 +6,15 @@ public class GameManager : MonoBehaviour
 {
     private const string GameDataPlayerPrefs = "GameData";
 
-    [SerializeField] private Camera _camera;
+    [SerializeField] private CameraBahaviour _camera;
     [SerializeField] private Level[] _levels;
     [SerializeField] private MoneyTracker _moneyTracker;
+    [SerializeField] private UpgradesPanel _upgrades;
 
     [Header("UI")]
     [SerializeField] private Fade _fade;
     [SerializeField] private StartScreen _startScreen;
+    [SerializeField] private BoostButton _boostButton;
     [SerializeField] private CurrentEnergyView _energyView;
     [SerializeField] private TextMeshProUGUI _currentMoney;
 
@@ -46,6 +48,13 @@ public class GameManager : MonoBehaviour
         _moneyTracker.GotMoney += UpdateCurrentMoney;
 
         _currentMoney.text = $"{_gameData.CurrentMoney} $";
+
+        _upgrades.SetData(_gameData.SpeedUpgradeInteration, _gameData.BoostUpgradeInteration, _gameData.ExplosionUpgradeInteration);
+        _upgrades.UpdateButtonsInteractivity(_gameData.CurrentMoney);
+
+        _upgrades.SpeedUpgraded.AddListener(UpgradeSpeed);
+        _upgrades.BoostUpgraded.AddListener(UpgradeBoost);
+        _upgrades.ExplosionUpgraded.AddListener(UpgradeExplosion);
     }
 
     private void UpdateCurrentMoney(int newMoney)
@@ -53,6 +62,55 @@ public class GameManager : MonoBehaviour
         _gameData.CurrentMoney += newMoney;
         SaveData();
         _currentMoney.text = $"{_gameData.CurrentMoney} $";
+    }
+
+    private void UpgradeSpeed(float speed, int cost, int interations)
+    {
+        _gameData.SpeedUpgradeInteration = interations;
+        _gameData.CurrentMoney -= cost;
+        _gameData.AdditionalSpeed += speed;
+
+        _currentMoney.text = $"{_gameData.CurrentMoney} $";
+
+        SaveData();
+        
+        if (_currentLevel != null)
+            _currentLevel.RocketControl.AddSpeed(speed);
+
+        _upgrades.UpdateButtonsInteractivity(_gameData.CurrentMoney);
+    }
+
+    private void UpgradeBoost(float boost, int cost, int interations)
+    {
+        _gameData.BoostUpgradeInteration = interations;
+        _gameData.CurrentMoney -= cost;
+        _gameData.AdditionalBoost += boost;
+
+        _currentMoney.text = $"{_gameData.CurrentMoney} $";
+
+        SaveData();
+
+        if (_currentLevel != null)
+            _currentLevel.RocketControl.AddBoost(boost);
+
+        _upgrades.UpdateButtonsInteractivity(_gameData.CurrentMoney);
+    }
+
+    private void UpgradeExplosion(float explosionRadius, float explosionForce, int cost, int interations)
+    {
+        _gameData.BoostUpgradeInteration = interations;
+        _gameData.CurrentMoney -= cost;
+        _gameData.AdditionalExplosionForce += explosionRadius;
+        _gameData.AdditionalExplosionRadius += explosionForce;
+
+        _currentMoney.text = $"{_gameData.CurrentMoney} $";
+
+        SaveData();
+
+        if (_currentLevel != null)
+            _currentLevel.RocketControl.AddExplosion(explosionRadius, explosionForce);
+
+        _upgrades.UpdateButtonsInteractivity(_gameData.CurrentMoney);
     }
 
     private void OpenLevel(Level prefab)
@@ -66,10 +124,17 @@ public class GameManager : MonoBehaviour
         _startScreen.gameObject.SetActive(true);
         _currentLevel = Instantiate(prefab, Vector3.zero, Quaternion.identity);
 
-        _currentLevel.CameraControl.SetCamera(_camera.transform);
+        _upgrades.UpdateButtonsInteractivity(_gameData.CurrentMoney);
+
+        _currentLevel.RocketControl.AddSpeed(_gameData.AdditionalSpeed);
+        _currentLevel.RocketControl.AddBoost(_gameData.AdditionalBoost);
+        _currentLevel.RocketControl.AddExplosion(_gameData.AdditionalExplosionRadius, _gameData.AdditionalExplosionForce);
+
+        _currentLevel.CameraControl.SetCamera(_camera);
         _currentLevel.RocketControl.ObstacleHitted.AddListener(EndLevel);
         _moneyTracker.SetRocket(_currentLevel.RocketControl);
-        _energyView.SetRocket(_currentLevel.RocketControl);
+        _energyView.SetRocket(_currentLevel.RocketControl); 
+        _boostButton.SetRocket(_currentLevel.RocketControl);
     }
 
     private void SaveData()
@@ -88,6 +153,11 @@ public class GameManager : MonoBehaviour
         {
             _gameData.CurrentLevel++;
 
+            _gameData.AdditionalSpeed = 0;
+            _gameData.AdditionalBoost = 0;
+            _gameData.AdditionalExplosionForce = 0;
+            _gameData.AdditionalExplosionRadius = 0;
+
             if (_gameData.CurrentLevel >= _levels.Length)
                 _gameData.CurrentLevel = 0;
 
@@ -103,6 +173,8 @@ public class GameManager : MonoBehaviour
 
         _fade.FadeIn(() =>
         {
+            _camera.Camera.fieldOfView = 40f;
+            _camera.SpeedEffect.gameObject.SetActive(false);
             OpenLevel(_levels[_gameData.CurrentLevel]);
             _fade.FadeOut();
         });
@@ -114,4 +186,13 @@ public class GameData
 {
     public int CurrentLevel;
     public int CurrentMoney;
+
+    public int SpeedUpgradeInteration;
+    public int BoostUpgradeInteration;
+    public int ExplosionUpgradeInteration;
+
+    public float AdditionalSpeed;
+    public float AdditionalBoost;
+    public float AdditionalExplosionForce;
+    public float AdditionalExplosionRadius;
 }

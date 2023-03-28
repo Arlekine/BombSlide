@@ -25,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961175377069712787}
-  m_LocalRotation: {x: 0.067577064, y: -0, z: -0, w: 0.99771404}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 961175377812205381}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 7.7500005, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &961175377069712786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,25 +48,22 @@ MonoBehaviour:
   editorData:
     _bezierPath:
       points:
-      - {x: -0.18753052, y: -0.034316678, z: 0.32177144}
-      - {x: -0.12813622, y: 0.08981426, z: 2.03421}
-      - {x: -0.06874193, y: 0.2139452, z: 3.7466486}
-      - {x: -0.033355713, y: 0.09082222, z: 5.208176}
-      - {x: 0.012631174, y: -0.06918478, z: 7.1075344}
-      - {x: 0.038501933, y: -0.5701417, z: 9.622349}
-      - {x: 0.071014404, y: -1.1320877, z: 11.444007}
-      - {x: 0.10604516, y: -1.7375598, z: 13.406763}
-      - {x: 0.173863, y: -3.1355844, z: 15.803519}
-      - {x: 0.19079874, y: -3.8284707, z: 17.73739}
-      - {x: 0.20443256, y: -4.386266, z: 19.294218}
-      - {x: 0.16108392, y: -5.137187, z: 21.393053}
-      - {x: 0.18508913, y: -5.369416, z: 23.030285}
-      - {x: 0.23174334, y: -5.820755, z: 26.212252}
-      - {x: 0.44709125, y: -6.0176587, z: 30.595272}
-      - {x: 0.5040283, y: -5.3526897, z: 33.739372}
-      - {x: 0.5592397, y: -4.7078753, z: 36.788177}
-      - {x: 0.5571009, y: -2.934964, z: 40.01693}
-      - {x: 0.55496216, y: -1.1620526, z: 43.24568}
+      - {x: 0, y: 0, z: 0}
+      - {x: -0.04602324, y: 0.36963952, z: 7.0190387}
+      - {x: -0.09204648, y: 0.73927903, z: 14.038077}
+      - {x: -0.10290527, y: 0.12365723, z: 20.009445}
+      - {x: -0.13901815, y: -1.9237037, z: 39.8683}
+      - {x: -0.015437284, y: -9.933299, z: 65.49663}
+      - {x: 0, y: -13.855713, z: 85.071655}
+      - {x: 0.014139071, y: -17.448267, z: 103.0005}
+      - {x: 0, y: -23.321268, z: 126.78697}
+      - {x: 0, y: -25, z: 144.995}
+      - {x: 0, y: -25.964123, z: 155.45215}
+      - {x: 0, y: -25.523119, z: 169.51154}
+      - {x: 0, y: -25, z: 180}
+      - {x: 0, y: -24.699627, z: 186.02245}
+      - {x: 0, y: -23.849813, z: 193.01123}
+      - {x: 0, y: -23, z: 200}
       isClosed: 0
       space: 0
       controlMode: 3
@@ -82,23 +79,22 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      - 0
       globalNormalsAngle: 0
       flipNormals: 0
     vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0
-    showTransformTool: 0
+    showTransformTool: 1
     showPathBounds: 0
     showPerSegmentBounds: 0
     displayAnchorPoints: 1
     displayControlPoints: 1
-    bezierHandleScale: 5
+    bezierHandleScale: 0.1
     globalDisplaySettingsFoldout: 1
-    keepConstantHandleSize: 0
+    keepConstantHandleSize: 1
     showNormalsInVertexMode: 0
     showBezierPathInVertexMode: 0
-    showDisplayOptions: 1
+    showDisplayOptions: 0
     showPathOptions: 1
     showVertexPathDisplayOptions: 0
     showVertexPathOptions: 1
@@ -120,12 +116,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 961175377069712786}
   autoUpdate: 1
-  roadWidth: 3
-  thickness: 0.127
+  roadWidth: 2
+  thickness: 0.5
   flattenSurface: 0
   roadMaterial: {fileID: 2100000, guid: b5df4735192845740bd11076dc9cdc99, type: 2}
   undersideMaterial: {fileID: 2100000, guid: c1d8d882244c5344fa86a8fd23246f81, type: 2}
-  textureTiling: 8
+  textureTiling: 30
   meshHolder: {fileID: 961175377936469194}
 --- !u!1 &961175377812205382
 GameObject:
@@ -150,7 +146,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961175377812205382}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -376.41205, y: -1654.7627, z: 52.18164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

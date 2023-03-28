@@ -6,8 +6,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     [SerializeField] private int _cost;
-    [SerializeField] private ShatterTool _shatterTool;
 
     public int Cost => _cost;
-    public ShatterTool ShatterTool => _shatterTool;
+    public ShatterTool ShatterTool => GetComponent<ShatterTool>();
 }

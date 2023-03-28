@@ -3,7 +3,97 @@ guid: 496658155bded824fbbb2187ae1e3334
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: deaef144ab95f2349a8bb47dfc0fc10b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BUILDING_1
+    second: {fileID: 2100000, guid: 93bb861f7b6a11546b91a6e63ef1eb09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BUILDING_2
+    second: {fileID: 2100000, guid: 97f45554a9877bc4a94904de10fd69d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BUILDING_3
+    second: {fileID: 2100000, guid: 92441848d227be44c9e0899f23d59810, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Build_mat
+    second: {fileID: 2100000, guid: c63d344381213d44b811b71990aa173a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ROAD_1
+    second: {fileID: 2100000, guid: 5517f75037dc08446a44b7260204dab0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ROAD_SIDE_BLOCK
+    second: {fileID: 2100000, guid: e3e7449c6c3daab448228eeb21142b2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SiloTexture
+    second: {fileID: 2100000, guid: 07b4b0b8a1825814488d0c9a4e2314d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bridge_border
+    second: {fileID: 2100000, guid: a4aeaab9c113c5e46b758b35f973de7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bridge_concrete
+    second: {fileID: 2100000, guid: 31c31a8cf635f2f43828585b93ad40c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: build_1_mat
+    second: {fileID: 2100000, guid: ffad83f2490efd74d837c3fa3850c425, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: build_2_mat
+    second: {fileID: 2100000, guid: 61b66b3758b7b8f4885d0f0304348604, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: build_3_mat
+    second: {fileID: 2100000, guid: 385efaa1f6cf07c489f0fe1884294fd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: build_4_mat
+    second: {fileID: 2100000, guid: 733130c6d2ae3b7468d433c2cca89c84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert7
+    second: {fileID: 2100000, guid: 4b6aebc14d476f446bcb30995b766d2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert8
+    second: {fileID: 2100000, guid: 6afd71bdd0dda9e42b5a860bf50ec2fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert9
+    second: {fileID: 2100000, guid: 3d1a37daf6a174c4687fb13be5b6209b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: water_tower_mat
+    second: {fileID: 2100000, guid: 863fae7f5e23b7e47969bdc269850fe0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

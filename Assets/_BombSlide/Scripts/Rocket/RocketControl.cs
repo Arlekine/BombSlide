@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Lean.Touch;
 using PathCreation;
 using ShatterToolkit;
@@ -12,6 +13,9 @@ public class RocketControl : MonoBehaviour
     public UnityEvent MovingStarted;
     public UnityEvent FreeFlightStarted;
     public UnityEvent<Target> ObstacleHitted;
+
+    public UnityEvent BoostStart;
+    public UnityEvent BoostStop;
 
     [SerializeField] private PathMover _initialPath;
     [SerializeField] private Rigidbody _rigidbody;
@@ -41,6 +45,7 @@ public class RocketControl : MonoBehaviour
     [SerializeField] private float _targetYToDraw = 0f;
 
     [Header("FX")] 
+    [SerializeField] private TrailRenderer _sliderTrail;
     [SerializeField] private ParticleSystem _drive;
     [SerializeField] private ParticleSystem _boostDrive;
     [SerializeField] private ParticleSystem _explosion;
@@ -59,19 +64,31 @@ public class RocketControl : MonoBehaviour
     private float CurrentForwardSpeed => _isBoosting ? _boostSpeed : _outputSpeed;
     public float CurrentBoostNormalized => _currentBoostEnergy / _maxBoostEnergy;
 
-    private void Start()
+    private IEnumerator Start()
     {
         _initialPath.PlaceAtStart();
 
+        yield return null;
+
+        _sliderTrail.gameObject.SetActive(false);
+        _sliderTrail.Clear();
         _currentBoostEnergy = _maxBoostEnergy;
     }
 
-    public void ResetRocket()
+    public void AddSpeed(float speed)
     {
-        _isFreeFlight = false;
-        _currentBoostEnergy = _maxBoostEnergy;
-        _initialPath.PlaceAtStart();
+        _outputSpeed += speed;
+    }
 
+    public void AddBoost(float boost)
+    {
+        _boostSpeed += boost;
+    }
+
+    public void AddExplosion(float radius, float force)
+    {
+        _explosionForce += force;
+        _explosionRadius += radius;
     }
 
     public void StartBoost()
@@ -81,6 +98,14 @@ public class RocketControl : MonoBehaviour
 
         _isBoosting = true;
         _boostRoutine = StartCoroutine(BoostRoutine());
+
+        _cameraControl.Camera.Camera.DOFieldOfView(70f, 0.5f);
+        _cameraControl.Camera.SpeedEffect.gameObject.SetActive(true);
+
+        _drive.gameObject.SetActive(false);
+        _boostDrive.gameObject.SetActive(true);
+
+        BoostStart?.Invoke();
     }
 
     public void StopBoost()
@@ -92,18 +117,32 @@ public class RocketControl : MonoBehaviour
             StopCoroutine(_boostRoutine);
 
         _isBoosting = false;
+
+        _cameraControl.Camera.Camera.DOFieldOfView(55f, 0.5f);
+        _cameraControl.Camera.SpeedEffect.gameObject.SetActive(false);
+
+        _drive.gameObject.SetActive(true);
+        _boostDrive.gameObject.SetActive(false);
+
+        BoostStop?.Invoke();
     }
 
     [EditorButton]
     public void StartMoving()
     {
+        _sliderTrail.gameObject.SetActive(true);
+        _sliderTrail.Clear();
+
         _initialPath.StartMove();
         _initialPath.pathCompleted.AddListener(StartFreeFlight); 
         MovingStarted?.Invoke();
+
+        _drive.gameObject.SetActive(true);
     }
 
     private void StartFreeFlight(Vector3 outputDirection)
     {
+        _sliderTrail.transform.parent = transform.parent;
         _targetXPos = transform.position.x;
         _moveStartTime = Time.time;
         _isFreeFlight = true;
@@ -134,11 +173,6 @@ public class RocketControl : MonoBehaviour
             var forwardVector = _forwardMoveDirection * CurrentForwardSpeed * Time.fixedDeltaTime;
             var gravityVector = Vector3.up * GetVerticalSpeed(Time.time - _moveStartTime) * Time.fixedDeltaTime;
 
-            var position = _rigidbody.position + forwardVector;
-            position -= gravityVector;
-
-            var rotation = Quaternion.Lerp(_rigidbody.rotation, Quaternion.LookRotation(forwardVector - gravityVector), 4f * Time.deltaTime);
-
             var fingers = LeanTouch.GetFingers(true);
 
             if (fingers.Count > 0)
@@ -146,6 +180,12 @@ public class RocketControl : MonoBehaviour
                 _targetXPos = Mathf.Lerp(_targetXPos, fingers[0].GetLastWorldPosition(_cameraControl.CameraDistance).x, _horizontalMoveLerpParameter * Time.deltaTime);
                 _targetXPos = Mathf.Clamp(_targetXPos, _minX, _maxX);
             }
+
+
+            var position = _rigidbody.position + forwardVector;
+            position -= gravityVector;
+
+            var rotation = Quaternion.Lerp(_rigidbody.rotation, Quaternion.LookRotation(forwardVector + Vector3.right * (_targetXPos - position.x) * 5f - gravityVector), 4f * Time.deltaTime);
 
             position.x = _targetXPos;
             _rigidbody.MovePosition(position);
@@ -174,6 +214,8 @@ public class RocketControl : MonoBehaviour
         {
             ObstacleHitted?.Invoke(null);
         }
+
+        _explosion.Play(true);
     }
 
     private IEnumerator ExplosionRoutine()
@@ -184,7 +226,7 @@ public class RocketControl : MonoBehaviour
         
         foreach (var col in colliders)
         {
-            if (col.attachedRigidbody != null && col.attachedRigidbody.isKinematic == false)
+            if (col.attachedRigidbody != null)
             {
                 var shatter = col.GetComponent<ShatterTool>();
                 
@@ -199,7 +241,7 @@ public class RocketControl : MonoBehaviour
 
         foreach (var col in colliders)
         {
-            if (col.attachedRigidbody != null && col.attachedRigidbody.isKinematic == false)
+            if (col.attachedRigidbody != null)
             {
                 var shatter = col.GetComponent<ShatterTool>();
 
