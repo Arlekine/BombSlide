@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2054575414437061412}
   - component: {fileID: 2520917996656557579}
   - component: {fileID: 333105410747833869}
+  - component: {fileID: 4434847777116489095}
+  - component: {fileID: 7741768724307355206}
   m_Layer: 0
   m_Name: ROAD_3
   m_TagString: Untagged
@@ -129,6 +131,37 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5399843439914541313, guid: 496658155bded824fbbb2187ae1e3334, type: 3}
+--- !u!114 &4434847777116489095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105517551397801116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 5
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 0
+  sendPostSplitMessage: 0
+  internalHullType: 0
+--- !u!114 &7741768724307355206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105517551397801116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59840f7021310248963f79bcc8a8bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4855530810661542878
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +176,8 @@ GameObject:
   - component: {fileID: 3950777113133400807}
   - component: {fileID: 2250238436697034085}
   - component: {fileID: 8304180821088575464}
+  - component: {fileID: 8758960541647011647}
+  - component: {fileID: 5718453447375403815}
   m_Layer: 0
   m_Name: SIDE_BLOCK_ROAD_3
   m_TagString: Untagged
@@ -161,7 +196,8 @@ Transform:
   m_LocalPosition: {x: -0, y: 0, z: 30.000002}
   m_LocalScale: {x: 12.5, y: 12.5, z: 12.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4278090908995665056}
   m_Father: {fileID: 3843128356220167476}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -258,6 +294,37 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1640499174618353136, guid: 496658155bded824fbbb2187ae1e3334, type: 3}
+--- !u!114 &8758960541647011647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4855530810661542878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 5
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 0
+  sendPostSplitMessage: 0
+  internalHullType: 0
+--- !u!114 &5718453447375403815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4855530810661542878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59840f7021310248963f79bcc8a8bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5845116708096974547
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3843128356220167476}
+  - component: {fileID: 3825051647614145972}
   m_Layer: 0
   m_Name: Roads_3
   m_TagString: Untagged
@@ -289,5 +357,53 @@ Transform:
   - {fileID: 283303359714252971}
   - {fileID: 6564611027131443615}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3825051647614145972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5845116708096974547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cost: 100
+  _destractionReactions:
+  - ShatterTool: {fileID: 8758960541647011647}
+    Point: {fileID: 4278090908995665056}
+  _rigidbodies: []
+--- !u!1 &5895063773565511839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4278090908995665056}
+  m_Layer: 0
+  m_Name: destractPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4278090908995665056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5895063773565511839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6564611027131443615}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -1,13 +1,18 @@
 // Shatter Toolkit
 // Copyright 2015 Gustav Olsson
+
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace ShatterToolkit
 {
     [RequireComponent(typeof(MeshFilter))]
     public class ShatterTool : MonoBehaviour
     {
+        public Action OnHitted;
+
         [SerializeField]
         protected int generation = 1;
         
@@ -173,11 +178,11 @@ namespace ShatterToolkit
         /// <param name="point">
         /// The world-space point.
         /// </param>
-        public void Shatter(Vector3 point, int iterations = 1)
+        [EditorButton]
+        public void Shatter(Vector3 point)
         {
             if (!IsLastGeneration)
             {
-                iterations--;
                 // Increase generation
                 generation++;
                 
@@ -189,7 +194,7 @@ namespace ShatterToolkit
                     planes[i] = new Plane(Random.onUnitSphere, point);
                 }
                 
-                Split(planes, iterations);
+                Split(planes);
             }
         }
         
@@ -200,7 +205,7 @@ namespace ShatterToolkit
         /// <param name="planes">
         /// An array of world-space planes with unit-length normals.
         /// </param>
-        public void Split(Plane[] planes, int interations = 1)
+        public void Split(Plane[] planes)
         {
             if (planes != null && planes.Length > 0 && isIntact && hull != null && !hull.IsEmpty)
             {
@@ -220,11 +225,6 @@ namespace ShatterToolkit
                 
                 GameObject[] newGameObjects;
                 CreateNewGameObjects(newHulls, out newGameObjects);
-                
-                /*if (sendPostSplitMessage)
-                {
-                    SendMessage("PostSplit", newGameObjects, SendMessageOptions.DontRequireReceiver);
-                }*/
 
                 Destroy(gameObject);
                 

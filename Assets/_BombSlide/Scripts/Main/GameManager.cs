@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singletone<GameManager>
 {
     private const string GameDataPlayerPrefs = "GameData";
 
@@ -13,16 +13,21 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private Fade _fade;
+    [SerializeField] private LevelTarget _levelTarget;
     [SerializeField] private StartScreen _startScreen;
     [SerializeField] private BoostButton _boostButton;
     [SerializeField] private CurrentEnergyView _energyView;
     [SerializeField] private TextMeshProUGUI _currentMoney;
+    [SerializeField] private SwitchButton _hapticButton;
+    [SerializeField] private SwitchButton _soundButton;
 
     [Space] 
     [SerializeField] private float _timeBeforeLevelRestart;
 
     private GameData _gameData;
     private Level _currentLevel;
+
+    public bool HapticOn => _gameData.HapticOn;
 
     private void Awake()
     {
@@ -47,7 +52,7 @@ public class GameManager : MonoBehaviour
         _startScreen.Clicked += StartLevel;
         _moneyTracker.GotMoney += UpdateCurrentMoney;
 
-        _currentMoney.text = $"{_gameData.CurrentMoney} $";
+        _currentMoney.text = $"{_gameData.CurrentMoney}";
 
         _upgrades.SetData(_gameData.SpeedUpgradeInteration, _gameData.BoostUpgradeInteration, _gameData.ExplosionUpgradeInteration);
         _upgrades.UpdateButtonsInteractivity(_gameData.CurrentMoney);
@@ -55,6 +60,27 @@ public class GameManager : MonoBehaviour
         _upgrades.SpeedUpgraded.AddListener(UpgradeSpeed);
         _upgrades.BoostUpgraded.AddListener(UpgradeBoost);
         _upgrades.ExplosionUpgraded.AddListener(UpgradeExplosion);
+
+        AudioListener.volume = _gameData.SoundOn ? 1f : 0f;
+
+        _hapticButton.SetState(_gameData.HapticOn);
+        _soundButton.SetState(_gameData.SoundOn);
+
+        _soundButton.OnSwitch += HapticSwitch;
+        _soundButton.OnSwitch += SoundSwitch;
+    }
+
+    public void HapticSwitch(bool isActive)
+    {
+        _gameData.HapticOn = isActive;
+        SaveData();
+    }
+
+    public void SoundSwitch(bool isActive)
+    {
+        _gameData.SoundOn = isActive;
+        AudioListener.volume = _gameData.SoundOn ? 1f : 0f;
+        SaveData();
     }
 
     private void UpdateCurrentMoney(int newMoney)
@@ -100,8 +126,8 @@ public class GameManager : MonoBehaviour
     {
         _gameData.BoostUpgradeInteration = interations;
         _gameData.CurrentMoney -= cost;
-        _gameData.AdditionalExplosionForce += explosionRadius;
-        _gameData.AdditionalExplosionRadius += explosionForce;
+        _gameData.AdditionalExplosionForce += explosionForce;
+        _gameData.AdditionalExplosionRadius += explosionRadius;
 
         _currentMoney.text = $"{_gameData.CurrentMoney} $";
 
@@ -123,6 +149,8 @@ public class GameManager : MonoBehaviour
 
         _startScreen.gameObject.SetActive(true);
         _currentLevel = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+
+        _levelTarget.SetData(_currentLevel.TargetToPass, _currentLevel.RocketControl);
 
         _upgrades.UpdateButtonsInteractivity(_gameData.CurrentMoney);
 
@@ -186,6 +214,9 @@ public class GameData
 {
     public int CurrentLevel;
     public int CurrentMoney;
+
+    public bool SoundOn = true;
+    public bool HapticOn = true;
 
     public int SpeedUpgradeInteration;
     public int BoostUpgradeInteration;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class  CurrentEnergyView : MonoBehaviour
 {
-    [SerializeField] private Slider _slider;
+    [SerializeField] private Image _slider;
 
     private RocketControl _rocketControl;
 
@@ -17,6 +17,6 @@ public class  CurrentEnergyView : MonoBehaviour
     private void Update()
     {
         if (_rocketControl != null)
-            _slider.normalizedValue = _rocketControl.CurrentBoostNormalized;
+            _slider.fillAmount = _rocketControl.CurrentBoostNormalized;
     }
 }

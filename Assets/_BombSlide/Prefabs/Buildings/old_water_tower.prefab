@@ -13,9 +13,7 @@ GameObject:
   - component: {fileID: 4296922215833182300}
   - component: {fileID: 8610762243635103197}
   - component: {fileID: 1432462343826452889}
-  - component: {fileID: 2064734288355159356}
-  - component: {fileID: 8953878666165288082}
-  - component: {fileID: 5560234732453695109}
+  - component: {fileID: 6545963535410191628}
   m_Layer: 0
   m_Name: old_water_tower_5
   m_TagString: Untagged
@@ -118,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2064734288355159356
+--- !u!114 &6545963535410191628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,42 +125,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 81493842503476153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &8953878666165288082
-MonoBehaviour:
+--- !u!1 &140700569753988385
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81493842503476153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &5560234732453695109
-MonoBehaviour:
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7811343007458472182}
+  m_Layer: 0
+  m_Name: destractPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7811343007458472182
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81493842503476153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
+  m_GameObject: {fileID: 140700569753988385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.26, y: -2.46, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3118431732187036572}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &595648097705366302
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,9 +172,7 @@ GameObject:
   - component: {fileID: 3909110983466605537}
   - component: {fileID: 1373301041634573002}
   - component: {fileID: 7954323456626288490}
-  - component: {fileID: 5340721344360023898}
-  - component: {fileID: 8115355042292799625}
-  - component: {fileID: 2683445592865410149}
+  - component: {fileID: 6526775623710668492}
   m_Layer: 0
   m_Name: old_water_tower_10
   m_TagString: Untagged
@@ -281,7 +275,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5340721344360023898
+--- !u!114 &6526775623710668492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,42 +284,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 595648097705366302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &8115355042292799625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595648097705366302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &2683445592865410149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595648097705366302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &668456360074367624
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,9 +300,7 @@ GameObject:
   - component: {fileID: 5953889394763628974}
   - component: {fileID: 3485706126603687379}
   - component: {fileID: 3500553349876198164}
-  - component: {fileID: 5162474371897839361}
-  - component: {fileID: 4306162924570581853}
-  - component: {fileID: 7762366676337811441}
+  - component: {fileID: 4367206415448819500}
   m_Layer: 0
   m_Name: old_water_tower_28
   m_TagString: Untagged
@@ -444,7 +403,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5162474371897839361
+--- !u!114 &4367206415448819500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -453,42 +412,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 668456360074367624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &4306162924570581853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668456360074367624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &7762366676337811441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668456360074367624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &670938851170507188
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,9 +428,7 @@ GameObject:
   - component: {fileID: 7679823546915416043}
   - component: {fileID: 1888712768179864343}
   - component: {fileID: 8266978133034216073}
-  - component: {fileID: 8188485350355721391}
-  - component: {fileID: 2363974703209625971}
-  - component: {fileID: 6305029950211685005}
+  - component: {fileID: 8829733669710237106}
   m_Layer: 0
   m_Name: old_water_tower_44
   m_TagString: Untagged
@@ -525,7 +449,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5184041712147698421}
-  m_RootOrder: 43
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5207842830887463597
 MeshFilter:
@@ -607,7 +531,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8188485350355721391
+--- !u!114 &8829733669710237106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -616,42 +540,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 670938851170507188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &2363974703209625971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670938851170507188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &6305029950211685005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670938851170507188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &688726677780324064
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,6 +552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5184041712147698421}
+  - component: {fileID: 5869576586818181023}
   m_Layer: 0
   m_Name: old_water_tower
   m_TagString: Untagged
@@ -718,15 +610,78 @@ Transform:
   - {fileID: 8348434155104538550}
   - {fileID: 3734756982545438057}
   - {fileID: 4024566688734458302}
+  - {fileID: 3904667280281305463}
+  - {fileID: 272508939225904046}
   - {fileID: 1491920157425500852}
   - {fileID: 3262330679897089159}
   - {fileID: 8324091925426772033}
   - {fileID: 3118431732187036572}
-  - {fileID: 3904667280281305463}
-  - {fileID: 272508939225904046}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5869576586818181023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688726677780324064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cost: 100
+  _destractionReactions:
+  - ShatterTool: {fileID: 7598452166365106581}
+    Point: {fileID: 7965424084024826703}
+  - ShatterTool: {fileID: 6606763626826643025}
+    Point: {fileID: 1795608113048537982}
+  - ShatterTool: {fileID: 1378870848364416463}
+    Point: {fileID: 7302517836599840974}
+  - ShatterTool: {fileID: 1438344009293857154}
+    Point: {fileID: 7811343007458472182}
+  _rigidbodies:
+  - {fileID: 7081924233359576525}
+  - {fileID: 8459533231843363817}
+  - {fileID: 4876395404723948757}
+  - {fileID: 986114990595706244}
+  - {fileID: 6545963535410191628}
+  - {fileID: 4504677099039662221}
+  - {fileID: 708143753948121205}
+  - {fileID: 2828584978004371360}
+  - {fileID: 1808114592854113043}
+  - {fileID: 6526775623710668492}
+  - {fileID: 6302168103782070558}
+  - {fileID: 4644266041212036111}
+  - {fileID: 6139159287929576873}
+  - {fileID: 6755931085567430188}
+  - {fileID: 7120246883204727670}
+  - {fileID: 1733635694459900985}
+  - {fileID: 8727328586614998266}
+  - {fileID: 5998972985795526120}
+  - {fileID: 2238424081998042779}
+  - {fileID: 2210022982884197617}
+  - {fileID: 331317952704615786}
+  - {fileID: 7846122203904467827}
+  - {fileID: 2327669881987390026}
+  - {fileID: 2492884821061661394}
+  - {fileID: 4435202856046064910}
+  - {fileID: 6025322496642877216}
+  - {fileID: 5243028980047553287}
+  - {fileID: 4367206415448819500}
+  - {fileID: 8243579461043277447}
+  - {fileID: 735388108799877851}
+  - {fileID: 9197307038173809536}
+  - {fileID: 4245274490274629076}
+  - {fileID: 7687390869205098330}
+  - {fileID: 8356848699976441939}
+  - {fileID: 2968060541789476581}
+  - {fileID: 7033107265005239507}
+  - {fileID: 5268438766942217949}
+  - {fileID: 2106931308239046668}
+  - {fileID: 4471977755292659630}
+  - {fileID: 8829733669710237106}
 --- !u!1 &721115207267126353
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,9 +697,9 @@ GameObject:
   - component: {fileID: 4199324172453456492}
   - component: {fileID: 7598452166365106581}
   - component: {fileID: 662420375093146178}
-  - component: {fileID: 6111421741201152014}
+  - component: {fileID: 183417743604643317}
   m_Layer: 0
-  m_Name: old_water_tower_39
+  m_Name: bigPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,9 +716,10 @@ Transform:
   m_LocalPosition: {x: 0.18632813, y: 23.492865, z: -0.06986046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7965424084024826703}
   m_Father: {fileID: 5184041712147698421}
-  m_RootOrder: 38
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8592427508337797748
 MeshFilter:
@@ -877,7 +833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: {x: 100, y: 100}
---- !u!114 &6111421741201152014
+--- !u!114 &183417743604643317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -886,10 +842,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 721115207267126353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
+  m_Script: {fileID: 11500000, guid: b59840f7021310248963f79bcc8a8bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &1132234304718132222
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,9 +858,7 @@ GameObject:
   - component: {fileID: 8619114008036734241}
   - component: {fileID: 5021089283344094707}
   - component: {fileID: 8201664581091226108}
-  - component: {fileID: 6237695359434349232}
-  - component: {fileID: 25951757522906226}
-  - component: {fileID: 5144052346276307202}
+  - component: {fileID: 2828584978004371360}
   m_Layer: 0
   m_Name: old_water_tower_8
   m_TagString: Untagged
@@ -1008,7 +961,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6237695359434349232
+--- !u!114 &2828584978004371360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1017,42 +970,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1132234304718132222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &25951757522906226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132234304718132222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &5144052346276307202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132234304718132222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &1362925523283676285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,9 +986,7 @@ GameObject:
   - component: {fileID: 8961337823328620043}
   - component: {fileID: 137760368992839556}
   - component: {fileID: 77556667023477076}
-  - component: {fileID: 7711439535263984760}
-  - component: {fileID: 5973881196275168145}
-  - component: {fileID: 869116434480039968}
+  - component: {fileID: 7033107265005239507}
   m_Layer: 0
   m_Name: old_water_tower_36
   m_TagString: Untagged
@@ -1171,7 +1089,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7711439535263984760
+--- !u!114 &7033107265005239507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1180,42 +1098,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1362925523283676285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &5973881196275168145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362925523283676285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &869116434480039968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362925523283676285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &1424297373726212258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,9 +1114,7 @@ GameObject:
   - component: {fileID: 7868938538670337184}
   - component: {fileID: 3548500332247102485}
   - component: {fileID: 2995380335797510493}
-  - component: {fileID: 5137789646825783211}
-  - component: {fileID: 2866613186094390703}
-  - component: {fileID: 5214073402855808316}
+  - component: {fileID: 2106931308239046668}
   m_Layer: 0
   m_Name: old_water_tower_38
   m_TagString: Untagged
@@ -1334,7 +1217,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5137789646825783211
+--- !u!114 &2106931308239046668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1343,42 +1226,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1424297373726212258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &2866613186094390703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424297373726212258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &5214073402855808316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424297373726212258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &1856229020771014249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,9 +1242,7 @@ GameObject:
   - component: {fileID: 6843340176426568931}
   - component: {fileID: 2553861545107150436}
   - component: {fileID: 7522065767576852948}
-  - component: {fileID: 9073748830213092078}
-  - component: {fileID: 4030667677219568689}
-  - component: {fileID: 74693526725117535}
+  - component: {fileID: 4471977755292659630}
   m_Layer: 0
   m_Name: old_water_tower_43
   m_TagString: Untagged
@@ -1415,7 +1263,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5184041712147698421}
-  m_RootOrder: 42
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5270109747004158744
 MeshFilter:
@@ -1497,7 +1345,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9073748830213092078
+--- !u!114 &4471977755292659630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1506,42 +1354,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1856229020771014249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &4030667677219568689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856229020771014249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &74693526725117535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856229020771014249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &2660998050202049312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,9 +1372,9 @@ GameObject:
   - component: {fileID: 3694400569583274375}
   - component: {fileID: 6606763626826643025}
   - component: {fileID: 4209141403190241588}
-  - component: {fileID: 2184620021890132259}
+  - component: {fileID: 4202673443820906196}
   m_Layer: 0
-  m_Name: old_water_tower_40
+  m_Name: bigPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1576,9 +1391,10 @@ Transform:
   m_LocalPosition: {x: 0.18631898, y: 53.090412, z: -0.06986103}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1795608113048537982}
   m_Father: {fileID: 5184041712147698421}
-  m_RootOrder: 39
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8500475890762613007
 MeshFilter:
@@ -1692,7 +1508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: {x: 100, y: 100}
---- !u!114 &2184620021890132259
+--- !u!114 &4202673443820906196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1701,10 +1517,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2660998050202049312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
+  m_Script: {fileID: 11500000, guid: b59840f7021310248963f79bcc8a8bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &2671327588560241039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,9 +1533,7 @@ GameObject:
   - component: {fileID: 8163807762390473035}
   - component: {fileID: 3445794018046608004}
   - component: {fileID: 8058970713827114903}
-  - component: {fileID: 5691002177535756432}
-  - component: {fileID: 2554702365017229068}
-  - component: {fileID: 1515124608028423001}
+  - component: {fileID: 2492884821061661394}
   m_Layer: 0
   m_Name: old_water_tower_24
   m_TagString: Untagged
@@ -1823,7 +1636,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5691002177535756432
+--- !u!114 &2492884821061661394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1832,42 +1645,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2671327588560241039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &2554702365017229068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2671327588560241039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &1515124608028423001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2671327588560241039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &2828590317253032992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,9 +1661,7 @@ GameObject:
   - component: {fileID: 2245961608593663014}
   - component: {fileID: 3978035888133735881}
   - component: {fileID: 3943630789483247997}
-  - component: {fileID: 1108136025307042829}
-  - component: {fileID: 5062298708848465744}
-  - component: {fileID: 8638390382645682488}
+  - component: {fileID: 986114990595706244}
   m_Layer: 0
   m_Name: old_water_tower_4
   m_TagString: Untagged
@@ -1986,7 +1764,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1108136025307042829
+--- !u!114 &986114990595706244
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1995,42 +1773,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2828590317253032992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &5062298708848465744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2828590317253032992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &8638390382645682488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2828590317253032992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &2834812862931044032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,9 +1789,7 @@ GameObject:
   - component: {fileID: 8413616090007906811}
   - component: {fileID: 553105986444216121}
   - component: {fileID: 4268390005233820050}
-  - component: {fileID: 3863856630048233754}
-  - component: {fileID: 2768496087083604374}
-  - component: {fileID: 7228063161318577759}
+  - component: {fileID: 8459533231843363817}
   m_Layer: 0
   m_Name: old_water_tower_2
   m_TagString: Untagged
@@ -2149,7 +1892,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3863856630048233754
+--- !u!114 &8459533231843363817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2158,42 +1901,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2834812862931044032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &2768496087083604374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2834812862931044032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &7228063161318577759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2834812862931044032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &2918750307699526219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,9 +1917,7 @@ GameObject:
   - component: {fileID: 4723826768851618757}
   - component: {fileID: 8157667860142924180}
   - component: {fileID: 5390927831098919103}
-  - component: {fileID: 251246526220031141}
-  - component: {fileID: 4912513086386889640}
-  - component: {fileID: 4391299575630266769}
+  - component: {fileID: 5268438766942217949}
   m_Layer: 0
   m_Name: old_water_tower_37
   m_TagString: Untagged
@@ -2312,7 +2020,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &251246526220031141
+--- !u!114 &5268438766942217949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2321,42 +2029,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2918750307699526219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &4912513086386889640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2918750307699526219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &4391299575630266769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2918750307699526219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &3136816337553282179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2370,9 +2045,7 @@ GameObject:
   - component: {fileID: 1894479033401384013}
   - component: {fileID: 4756249700899935309}
   - component: {fileID: 560694223226949381}
-  - component: {fileID: 4602234364943852274}
-  - component: {fileID: 4735204452049505193}
-  - component: {fileID: 713716278011031950}
+  - component: {fileID: 708143753948121205}
   m_Layer: 0
   m_Name: old_water_tower_7
   m_TagString: Untagged
@@ -2475,7 +2148,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4602234364943852274
+--- !u!114 &708143753948121205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2484,42 +2157,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3136816337553282179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &4735204452049505193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3136816337553282179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &713716278011031950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3136816337553282179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &3216329686049363000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,9 +2173,7 @@ GameObject:
   - component: {fileID: 2259929326362195816}
   - component: {fileID: 7406526080422042522}
   - component: {fileID: 6815056972383745222}
-  - component: {fileID: 6097641756273241057}
-  - component: {fileID: 3885101788145528805}
-  - component: {fileID: 1601382568858201068}
+  - component: {fileID: 7687390869205098330}
   m_Layer: 0
   m_Name: old_water_tower_33
   m_TagString: Untagged
@@ -2638,7 +2276,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6097641756273241057
+--- !u!114 &7687390869205098330
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2647,42 +2285,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3216329686049363000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &3885101788145528805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3216329686049363000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &1601382568858201068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3216329686049363000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &3220980970528396374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,9 +2301,7 @@ GameObject:
   - component: {fileID: 4297716857796555050}
   - component: {fileID: 3466673436260289490}
   - component: {fileID: 3742873256582755487}
-  - component: {fileID: 3695386792035124328}
-  - component: {fileID: 764990552764856112}
-  - component: {fileID: 883783711747510267}
+  - component: {fileID: 6139159287929576873}
   m_Layer: 0
   m_Name: old_water_tower_13
   m_TagString: Untagged
@@ -2801,7 +2404,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3695386792035124328
+--- !u!114 &6139159287929576873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2810,42 +2413,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3220980970528396374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &764990552764856112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3220980970528396374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &883783711747510267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3220980970528396374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &3385140363777184287
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,9 +2429,7 @@ GameObject:
   - component: {fileID: 784824580923111964}
   - component: {fileID: 5317262653873306514}
   - component: {fileID: 7295158723888628256}
-  - component: {fileID: 3692407809458357173}
-  - component: {fileID: 7829410973962296173}
-  - component: {fileID: 2961018404917248534}
+  - component: {fileID: 331317952704615786}
   m_Layer: 0
   m_Name: old_water_tower_21
   m_TagString: Untagged
@@ -2964,7 +2532,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3692407809458357173
+--- !u!114 &331317952704615786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2973,42 +2541,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3385140363777184287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &7829410973962296173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3385140363777184287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &2961018404917248534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3385140363777184287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &3492905507318762822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3022,9 +2557,7 @@ GameObject:
   - component: {fileID: 8571577184747610630}
   - component: {fileID: 7591727938791569757}
   - component: {fileID: 154718919420704054}
-  - component: {fileID: 4193829846571712689}
-  - component: {fileID: 7973984691204520549}
-  - component: {fileID: 8961147944231295716}
+  - component: {fileID: 4644266041212036111}
   m_Layer: 0
   m_Name: old_water_tower_12
   m_TagString: Untagged
@@ -3127,7 +2660,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4193829846571712689
+--- !u!114 &4644266041212036111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3136,42 +2669,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3492905507318762822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &7973984691204520549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3492905507318762822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &8961147944231295716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3492905507318762822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &3626819670143078188
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,9 +2685,7 @@ GameObject:
   - component: {fileID: 3167753037167605834}
   - component: {fileID: 3540399058075630516}
   - component: {fileID: 4921792453327814430}
-  - component: {fileID: 7304593952797810758}
-  - component: {fileID: 5914097623440947300}
-  - component: {fileID: 8266070545314117152}
+  - component: {fileID: 8356848699976441939}
   m_Layer: 0
   m_Name: old_water_tower_34
   m_TagString: Untagged
@@ -3290,7 +2788,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7304593952797810758
+--- !u!114 &8356848699976441939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3299,42 +2797,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3626819670143078188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &5914097623440947300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3626819670143078188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &8266070545314117152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3626819670143078188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &3807725540987181183
 GameObject:
   m_ObjectHideFlags: 0
@@ -3348,9 +2813,7 @@ GameObject:
   - component: {fileID: 2805386653179048040}
   - component: {fileID: 8671914933021744672}
   - component: {fileID: 8648783924278874323}
-  - component: {fileID: 4981883893281643046}
-  - component: {fileID: 9042630904971548656}
-  - component: {fileID: 4599232268252721162}
+  - component: {fileID: 7120246883204727670}
   m_Layer: 0
   m_Name: old_water_tower_15
   m_TagString: Untagged
@@ -3453,7 +2916,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4981883893281643046
+--- !u!114 &7120246883204727670
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3462,42 +2925,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3807725540987181183}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &9042630904971548656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3807725540987181183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &4599232268252721162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3807725540987181183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &3809119469105838062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,9 +2941,7 @@ GameObject:
   - component: {fileID: 3656933812606870659}
   - component: {fileID: 6527372342458033407}
   - component: {fileID: 3410933448221625975}
-  - component: {fileID: 5975074098182718207}
-  - component: {fileID: 120815634031854828}
-  - component: {fileID: 7395385211046547004}
+  - component: {fileID: 8243579461043277447}
   m_Layer: 0
   m_Name: old_water_tower_29
   m_TagString: Untagged
@@ -3616,7 +3044,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5975074098182718207
+--- !u!114 &8243579461043277447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3625,42 +3053,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3809119469105838062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &120815634031854828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3809119469105838062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &7395385211046547004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3809119469105838062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &4019059361012360462
 GameObject:
   m_ObjectHideFlags: 0
@@ -3674,9 +3069,7 @@ GameObject:
   - component: {fileID: 6965641681874969185}
   - component: {fileID: 5884373865230986769}
   - component: {fileID: 6873683209983624948}
-  - component: {fileID: 414858783384687791}
-  - component: {fileID: 5490432297782896645}
-  - component: {fileID: 3302649172096902985}
+  - component: {fileID: 6025322496642877216}
   m_Layer: 0
   m_Name: old_water_tower_26
   m_TagString: Untagged
@@ -3779,7 +3172,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &414858783384687791
+--- !u!114 &6025322496642877216
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3788,42 +3181,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4019059361012360462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &5490432297782896645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4019059361012360462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &3302649172096902985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4019059361012360462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &4437442913586457733
 GameObject:
   m_ObjectHideFlags: 0
@@ -3837,9 +3197,7 @@ GameObject:
   - component: {fileID: 724107789543520361}
   - component: {fileID: 8352410264290721805}
   - component: {fileID: 8147403050949541827}
-  - component: {fileID: 6482727995294742437}
-  - component: {fileID: 6548216939583844516}
-  - component: {fileID: 6554981704184761958}
+  - component: {fileID: 2327669881987390026}
   m_Layer: 0
   m_Name: old_water_tower_23
   m_TagString: Untagged
@@ -3942,7 +3300,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6482727995294742437
+--- !u!114 &2327669881987390026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3951,42 +3309,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4437442913586457733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &6548216939583844516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4437442913586457733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &6554981704184761958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4437442913586457733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &4635172345161329905
 GameObject:
   m_ObjectHideFlags: 0
@@ -4000,9 +3325,7 @@ GameObject:
   - component: {fileID: 4582443634764877539}
   - component: {fileID: 7108201210234908189}
   - component: {fileID: 6816001131312964822}
-  - component: {fileID: 6298174289866657711}
-  - component: {fileID: 1682331857340089040}
-  - component: {fileID: 1667620755924985749}
+  - component: {fileID: 4876395404723948757}
   m_Layer: 0
   m_Name: old_water_tower_3
   m_TagString: Untagged
@@ -4105,7 +3428,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6298174289866657711
+--- !u!114 &4876395404723948757
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4114,42 +3437,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4635172345161329905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &1682331857340089040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4635172345161329905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &1667620755924985749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4635172345161329905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &4684194521723869961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4163,9 +3453,7 @@ GameObject:
   - component: {fileID: 3362423788560112826}
   - component: {fileID: 5306101670247431183}
   - component: {fileID: 422790437610762146}
-  - component: {fileID: 8903792110541333124}
-  - component: {fileID: 2725766413223031695}
-  - component: {fileID: 4220997331921968119}
+  - component: {fileID: 6302168103782070558}
   m_Layer: 0
   m_Name: old_water_tower_11
   m_TagString: Untagged
@@ -4268,7 +3556,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8903792110541333124
+--- !u!114 &6302168103782070558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4277,42 +3565,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 4684194521723869961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &2725766413223031695
-MonoBehaviour:
+--- !u!1 &4813906117666895652
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4684194521723869961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &4220997331921968119
-MonoBehaviour:
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7302517836599840974}
+  m_Layer: 0
+  m_Name: destractPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7302517836599840974
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4684194521723869961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
+  m_GameObject: {fileID: 4813906117666895652}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8324091925426772033}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4816660352802726741
 GameObject:
   m_ObjectHideFlags: 0
@@ -4328,9 +3614,9 @@ GameObject:
   - component: {fileID: 7398446415269778647}
   - component: {fileID: 1378870848364416463}
   - component: {fileID: 3640835587508139232}
-  - component: {fileID: 1360067764056674988}
+  - component: {fileID: 2501221857893406969}
   m_Layer: 0
-  m_Name: old_water_tower_41
+  m_Name: bigPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4347,9 +3633,10 @@ Transform:
   m_LocalPosition: {x: 0.18632813, y: 62.35477, z: -0.06986075}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7302517836599840974}
   m_Father: {fileID: 5184041712147698421}
-  m_RootOrder: 40
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7665742661174318697
 MeshFilter:
@@ -4463,7 +3750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: {x: 100, y: 100}
---- !u!114 &1360067764056674988
+--- !u!114 &2501221857893406969
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4472,10 +3759,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4816660352802726741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
+  m_Script: {fileID: 11500000, guid: b59840f7021310248963f79bcc8a8bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &5167524079921444160
 GameObject:
   m_ObjectHideFlags: 0
@@ -4489,9 +3775,7 @@ GameObject:
   - component: {fileID: 58917856882345046}
   - component: {fileID: 492401282375266758}
   - component: {fileID: 1666351106839160508}
-  - component: {fileID: 8971633136839686695}
-  - component: {fileID: 7708380275301339055}
-  - component: {fileID: 8718841737230509549}
+  - component: {fileID: 9197307038173809536}
   m_Layer: 0
   m_Name: old_water_tower_31
   m_TagString: Untagged
@@ -4594,7 +3878,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8971633136839686695
+--- !u!114 &9197307038173809536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4603,42 +3887,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5167524079921444160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &7708380275301339055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5167524079921444160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &8718841737230509549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5167524079921444160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &5196239778062531528
 GameObject:
   m_ObjectHideFlags: 0
@@ -4652,9 +3903,7 @@ GameObject:
   - component: {fileID: 6662959201043594081}
   - component: {fileID: 9034218973766637327}
   - component: {fileID: 8529570388946303049}
-  - component: {fileID: 3412186722615804232}
-  - component: {fileID: 8970889700196882850}
-  - component: {fileID: 8771654051613252854}
+  - component: {fileID: 6755931085567430188}
   m_Layer: 0
   m_Name: old_water_tower_14
   m_TagString: Untagged
@@ -4757,7 +4006,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3412186722615804232
+--- !u!114 &6755931085567430188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4766,42 +4015,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5196239778062531528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &8970889700196882850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5196239778062531528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &8771654051613252854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5196239778062531528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &5244300160757431298
 GameObject:
   m_ObjectHideFlags: 0
@@ -4815,9 +4031,7 @@ GameObject:
   - component: {fileID: 5443935091245714514}
   - component: {fileID: 7343244887019689387}
   - component: {fileID: 7959345929878735333}
-  - component: {fileID: 6783333619259664355}
-  - component: {fileID: 5115836864549137435}
-  - component: {fileID: 4534031824313159734}
+  - component: {fileID: 4245274490274629076}
   m_Layer: 0
   m_Name: old_water_tower_32
   m_TagString: Untagged
@@ -4920,7 +4134,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6783333619259664355
+--- !u!114 &4245274490274629076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4929,42 +4143,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5244300160757431298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &5115836864549137435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5244300160757431298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &4534031824313159734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5244300160757431298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &6015802565049210405
 GameObject:
   m_ObjectHideFlags: 0
@@ -4980,9 +4161,9 @@ GameObject:
   - component: {fileID: 7873632880895823948}
   - component: {fileID: 1438344009293857154}
   - component: {fileID: 2397865022702747680}
-  - component: {fileID: 7911111016520894875}
+  - component: {fileID: 6876681198459269825}
   m_Layer: 0
-  m_Name: old_water_tower_42
+  m_Name: BigPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4999,9 +4180,10 @@ Transform:
   m_LocalPosition: {x: 0.4413257, y: 48.23382, z: -0.064612776}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7811343007458472182}
   m_Father: {fileID: 5184041712147698421}
-  m_RootOrder: 41
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7160161758156385342
 MeshFilter:
@@ -5115,7 +4297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: {x: 100, y: 100}
---- !u!114 &7911111016520894875
+--- !u!114 &6876681198459269825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5124,10 +4306,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6015802565049210405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
+  m_Script: {fileID: 11500000, guid: b59840f7021310248963f79bcc8a8bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &6040120787361746980
 GameObject:
   m_ObjectHideFlags: 0
@@ -5141,9 +4322,7 @@ GameObject:
   - component: {fileID: 1567724114778427918}
   - component: {fileID: 2636958866620970155}
   - component: {fileID: 8806206290112295233}
-  - component: {fileID: 6398165383814953767}
-  - component: {fileID: 8868187173317323467}
-  - component: {fileID: 7416148389990141969}
+  - component: {fileID: 1733635694459900985}
   m_Layer: 0
   m_Name: old_water_tower_16
   m_TagString: Untagged
@@ -5246,7 +4425,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6398165383814953767
+--- !u!114 &1733635694459900985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5255,42 +4434,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 6040120787361746980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &8868187173317323467
-MonoBehaviour:
+--- !u!1 &6526871860992629145
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6040120787361746980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &7416148389990141969
-MonoBehaviour:
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795608113048537982}
+  m_Layer: 0
+  m_Name: destractPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1795608113048537982
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6040120787361746980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
+  m_GameObject: {fileID: 6526871860992629145}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3262330679897089159}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6914668753255862206
 GameObject:
   m_ObjectHideFlags: 0
@@ -5304,9 +4481,7 @@ GameObject:
   - component: {fileID: 7135200095108638582}
   - component: {fileID: 4892713269550553434}
   - component: {fileID: 5450605329934756282}
-  - component: {fileID: 2840671972080241624}
-  - component: {fileID: 5363148199767147291}
-  - component: {fileID: 4937989317331958506}
+  - component: {fileID: 4435202856046064910}
   m_Layer: 0
   m_Name: old_water_tower_25
   m_TagString: Untagged
@@ -5409,7 +4584,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2840671972080241624
+--- !u!114 &4435202856046064910
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5418,42 +4593,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6914668753255862206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &5363148199767147291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6914668753255862206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &4937989317331958506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6914668753255862206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &7016396200044400366
 GameObject:
   m_ObjectHideFlags: 0
@@ -5467,9 +4609,7 @@ GameObject:
   - component: {fileID: 3954305404654268873}
   - component: {fileID: 8345485987169274220}
   - component: {fileID: 3345799132717436859}
-  - component: {fileID: 8259189542455127754}
-  - component: {fileID: 1427303570884494424}
-  - component: {fileID: 4597440940601259527}
+  - component: {fileID: 7846122203904467827}
   m_Layer: 0
   m_Name: old_water_tower_22
   m_TagString: Untagged
@@ -5572,7 +4712,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8259189542455127754
+--- !u!114 &7846122203904467827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5581,42 +4721,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7016396200044400366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &1427303570884494424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7016396200044400366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &4597440940601259527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7016396200044400366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &7125664021496399047
 GameObject:
   m_ObjectHideFlags: 0
@@ -5630,9 +4737,7 @@ GameObject:
   - component: {fileID: 1468009491256801078}
   - component: {fileID: 6640206681190951442}
   - component: {fileID: 2767586419207293294}
-  - component: {fileID: 2477353172484833420}
-  - component: {fileID: 6464230908843331535}
-  - component: {fileID: 8635930636291147319}
+  - component: {fileID: 4504677099039662221}
   m_Layer: 0
   m_Name: old_water_tower_6
   m_TagString: Untagged
@@ -5735,7 +4840,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2477353172484833420
+--- !u!114 &4504677099039662221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5744,42 +4849,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7125664021496399047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &6464230908843331535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7125664021496399047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &8635930636291147319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7125664021496399047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &7541017159837142120
 GameObject:
   m_ObjectHideFlags: 0
@@ -5793,9 +4865,7 @@ GameObject:
   - component: {fileID: 892728930168251564}
   - component: {fileID: 499493107839007448}
   - component: {fileID: 1002926031648852099}
-  - component: {fileID: 2063374944079689439}
-  - component: {fileID: 939026884867766476}
-  - component: {fileID: 7145664208147947243}
+  - component: {fileID: 1808114592854113043}
   m_Layer: 0
   m_Name: old_water_tower_9
   m_TagString: Untagged
@@ -5898,7 +4968,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2063374944079689439
+--- !u!114 &1808114592854113043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5907,42 +4977,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7541017159837142120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &939026884867766476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7541017159837142120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &7145664208147947243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7541017159837142120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &7546556152046217030
 GameObject:
   m_ObjectHideFlags: 0
@@ -5956,9 +4993,7 @@ GameObject:
   - component: {fileID: 4975880674373080432}
   - component: {fileID: 7201626654009514584}
   - component: {fileID: 3183198295856733127}
-  - component: {fileID: 7032673439017553271}
-  - component: {fileID: 6994832275337161403}
-  - component: {fileID: 7841886352850568881}
+  - component: {fileID: 5243028980047553287}
   m_Layer: 0
   m_Name: old_water_tower_27
   m_TagString: Untagged
@@ -6061,7 +5096,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7032673439017553271
+--- !u!114 &5243028980047553287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6070,42 +5105,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7546556152046217030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &6994832275337161403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7546556152046217030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &7841886352850568881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7546556152046217030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &7607094358131730824
 GameObject:
   m_ObjectHideFlags: 0
@@ -6119,9 +5121,7 @@ GameObject:
   - component: {fileID: 6596308914785092730}
   - component: {fileID: 4851086991742625989}
   - component: {fileID: 3026041796624136285}
-  - component: {fileID: 9101421779182637970}
-  - component: {fileID: 1948266878950614812}
-  - component: {fileID: 2390191007368137724}
+  - component: {fileID: 8727328586614998266}
   m_Layer: 0
   m_Name: old_water_tower_17
   m_TagString: Untagged
@@ -6224,7 +5224,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9101421779182637970
+--- !u!114 &8727328586614998266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6233,42 +5233,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7607094358131730824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &1948266878950614812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7607094358131730824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &2390191007368137724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7607094358131730824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &7948439256737309295
 GameObject:
   m_ObjectHideFlags: 0
@@ -6282,9 +5249,7 @@ GameObject:
   - component: {fileID: 4469169933146921543}
   - component: {fileID: 1405026740467708579}
   - component: {fileID: 6586545640243240346}
-  - component: {fileID: 2587946118597321217}
-  - component: {fileID: 4520565343224933682}
-  - component: {fileID: 4829688900518077709}
+  - component: {fileID: 2968060541789476581}
   m_Layer: 0
   m_Name: old_water_tower_35
   m_TagString: Untagged
@@ -6387,7 +5352,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2587946118597321217
+--- !u!114 &2968060541789476581
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6396,42 +5361,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7948439256737309295}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &4520565343224933682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7948439256737309295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &4829688900518077709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7948439256737309295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &7950499719381646967
 GameObject:
   m_ObjectHideFlags: 0
@@ -6445,9 +5377,7 @@ GameObject:
   - component: {fileID: 8900582817321916611}
   - component: {fileID: 4070446837432422132}
   - component: {fileID: 3554540210255871537}
-  - component: {fileID: 5703364725473135363}
-  - component: {fileID: 1003188367456853282}
-  - component: {fileID: 3508794951168116303}
+  - component: {fileID: 7081924233359576525}
   m_Layer: 0
   m_Name: old_water_tower_1
   m_TagString: Untagged
@@ -6550,7 +5480,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5703364725473135363
+--- !u!114 &7081924233359576525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6559,42 +5489,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7950499719381646967}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &1003188367456853282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7950499719381646967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &3508794951168116303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7950499719381646967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &8004147993211908880
 GameObject:
   m_ObjectHideFlags: 0
@@ -6608,9 +5505,7 @@ GameObject:
   - component: {fileID: 6686672773288692993}
   - component: {fileID: 6680143811775301343}
   - component: {fileID: 5315856532147583726}
-  - component: {fileID: 1760548500901115033}
-  - component: {fileID: 4201051744668121698}
-  - component: {fileID: 1138819564977697615}
+  - component: {fileID: 2238424081998042779}
   m_Layer: 0
   m_Name: old_water_tower_19
   m_TagString: Untagged
@@ -6713,7 +5608,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1760548500901115033
+--- !u!114 &2238424081998042779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6722,42 +5617,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8004147993211908880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &4201051744668121698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004147993211908880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &1138819564977697615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004147993211908880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &8005487622559950265
 GameObject:
   m_ObjectHideFlags: 0
@@ -6771,9 +5633,7 @@ GameObject:
   - component: {fileID: 1312547163741659719}
   - component: {fileID: 5779676981070898312}
   - component: {fileID: 7085505506925260069}
-  - component: {fileID: 2630055047791610111}
-  - component: {fileID: 2633270213294657155}
-  - component: {fileID: 1339038014770802011}
+  - component: {fileID: 2210022982884197617}
   m_Layer: 0
   m_Name: old_water_tower_20
   m_TagString: Untagged
@@ -6876,7 +5736,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2630055047791610111
+--- !u!114 &2210022982884197617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6885,42 +5745,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 8005487622559950265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &2633270213294657155
-MonoBehaviour:
+--- !u!1 &8064564599944447419
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8005487622559950265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &1339038014770802011
-MonoBehaviour:
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7965424084024826703}
+  m_Layer: 0
+  m_Name: destractPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7965424084024826703
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8005487622559950265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
+  m_GameObject: {fileID: 8064564599944447419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 19.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1491920157425500852}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8122226619896273902
 GameObject:
   m_ObjectHideFlags: 0
@@ -6934,9 +5792,7 @@ GameObject:
   - component: {fileID: 1452321490173911582}
   - component: {fileID: 2681707535538657809}
   - component: {fileID: 779194714183519892}
-  - component: {fileID: 6411984578934099105}
-  - component: {fileID: 7496047625759991178}
-  - component: {fileID: 8329657256751175372}
+  - component: {fileID: 735388108799877851}
   m_Layer: 0
   m_Name: old_water_tower_30
   m_TagString: Untagged
@@ -7039,7 +5895,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6411984578934099105
+--- !u!114 &735388108799877851
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7048,42 +5904,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8122226619896273902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &7496047625759991178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8122226619896273902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &8329657256751175372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8122226619896273902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100
 --- !u!1 &8324127165831646925
 GameObject:
   m_ObjectHideFlags: 0
@@ -7097,9 +5920,7 @@ GameObject:
   - component: {fileID: 8372786193569514169}
   - component: {fileID: 5578468543877435016}
   - component: {fileID: 3824521131510905210}
-  - component: {fileID: 4458682279044326895}
-  - component: {fileID: 1680759531277223053}
-  - component: {fileID: 2047354310419444316}
+  - component: {fileID: 5998972985795526120}
   m_Layer: 0
   m_Name: old_water_tower_18
   m_TagString: Untagged
@@ -7202,7 +6023,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4458682279044326895
+--- !u!114 &5998972985795526120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7211,39 +6032,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8324127165831646925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8ab384458794f4aaedfdaca6ee1e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generation: 1
-  generationLimit: 5
-  cuts: 2
-  fillCut: 1
-  sendPreSplitMessage: 0
-  sendPostSplitMessage: 0
-  internalHullType: 0
---- !u!114 &1680759531277223053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8324127165831646925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffc51ee67eb749739cd646e30301d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: {x: 100, y: 100}
---- !u!114 &2047354310419444316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8324127165831646925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f80d9721f1c1404e9d9266657c793e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 100

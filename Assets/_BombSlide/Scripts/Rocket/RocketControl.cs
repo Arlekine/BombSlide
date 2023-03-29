@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using Lean.Touch;
+using MoreMountains.NiceVibrations;
 using PathCreation;
 using ShatterToolkit;
 using UnityEngine;
@@ -32,7 +33,7 @@ public class RocketControl : MonoBehaviour
     [SerializeField] private float _maxX;
 
     [Header("Boost")] 
-    [SerializeField] private float _boostSpeed;
+    [Min(1)][SerializeField] private float _boostSpeedModifier;
     [SerializeField] private float _boostEnergyCost;
     [SerializeField] private float _maxBoostEnergy;
 
@@ -45,10 +46,18 @@ public class RocketControl : MonoBehaviour
     [SerializeField] private float _targetYToDraw = 0f;
 
     [Header("FX")] 
+    [SerializeField] private bool _useParticles;
     [SerializeField] private TrailRenderer _sliderTrail;
     [SerializeField] private ParticleSystem _drive;
     [SerializeField] private ParticleSystem _boostDrive;
     [SerializeField] private ParticleSystem _explosion;
+
+    [Header("Sound")] 
+    [SerializeField] private AudioSource _explosionAudio;
+    [SerializeField] private AudioSource _flyAudio;
+    [SerializeField] private float _soundStartingTime;
+    [SerializeField] private float _defaultVolume;
+    [SerializeField] private float _boostVolume;
 
     private Vector3 _forwardMoveDirection;
 
@@ -60,8 +69,9 @@ public class RocketControl : MonoBehaviour
     private float _currentBoostEnergy;
 
     private Coroutine _boostRoutine;
+    private Tween _boostSoundRoutine;
 
-    private float CurrentForwardSpeed => _isBoosting ? _boostSpeed : _outputSpeed;
+    private float CurrentForwardSpeed => _isBoosting ? _outputSpeed * _boostSpeedModifier : _outputSpeed;
     public float CurrentBoostNormalized => _currentBoostEnergy / _maxBoostEnergy;
 
     private IEnumerator Start()
@@ -82,7 +92,7 @@ public class RocketControl : MonoBehaviour
 
     public void AddBoost(float boost)
     {
-        _boostSpeed += boost;
+        _currentBoostEnergy += boost;
     }
 
     public void AddExplosion(float radius, float force)
@@ -102,10 +112,16 @@ public class RocketControl : MonoBehaviour
         _cameraControl.Camera.Camera.DOFieldOfView(70f, 0.5f);
         _cameraControl.Camera.SpeedEffect.gameObject.SetActive(true);
 
-        _drive.gameObject.SetActive(false);
-        _boostDrive.gameObject.SetActive(true);
+        if (_useParticles)
+        {
+            _drive.gameObject.SetActive(false);
+            _boostDrive.gameObject.SetActive(true);
+        }
 
         BoostStart?.Invoke();
+
+        _boostSoundRoutine?.Kill();
+        _boostSoundRoutine = DOTween.To(() => _flyAudio.volume, v => _flyAudio.volume = v, _boostVolume, 1f);
     }
 
     public void StopBoost()
@@ -120,11 +136,17 @@ public class RocketControl : MonoBehaviour
 
         _cameraControl.Camera.Camera.DOFieldOfView(55f, 0.5f);
         _cameraControl.Camera.SpeedEffect.gameObject.SetActive(false);
-
-        _drive.gameObject.SetActive(true);
-        _boostDrive.gameObject.SetActive(false);
+        
+        if (_useParticles)
+        {
+            _drive.gameObject.SetActive(true);
+            _boostDrive.gameObject.SetActive(false);
+        }
 
         BoostStop?.Invoke();
+
+        _boostSoundRoutine?.Kill();
+        _boostSoundRoutine = DOTween.To(() => _flyAudio.volume, v => _flyAudio.volume = v, _defaultVolume, 1f);
     }
 
     [EditorButton]
@@ -136,8 +158,17 @@ public class RocketControl : MonoBehaviour
         _initialPath.StartMove();
         _initialPath.pathCompleted.AddListener(StartFreeFlight); 
         MovingStarted?.Invoke();
+        
+        if (_useParticles)
+        {
+            _drive.gameObject.SetActive(true);
+        }
 
-        _drive.gameObject.SetActive(true);
+        _flyAudio.Play();
+        _flyAudio.loop = true;
+
+        _boostSoundRoutine?.Kill();
+        _boostSoundRoutine = DOTween.To(() => _flyAudio.volume, v => _flyAudio.volume = v, _defaultVolume, _soundStartingTime);
     }
 
     private void StartFreeFlight(Vector3 outputDirection)
@@ -181,6 +212,8 @@ public class RocketControl : MonoBehaviour
                 _targetXPos = Mathf.Clamp(_targetXPos, _minX, _maxX);
             }
 
+            if (_isBoosting)
+                MMVibrationManager.Haptic(HapticTypes.LightImpact);
 
             var position = _rigidbody.position + forwardVector;
             position -= gravityVector;
@@ -198,14 +231,14 @@ public class RocketControl : MonoBehaviour
         if (_isFreeFlight == false)
             return;
 
-        var target = collider.gameObject.GetComponent<Target>();
+        var destractablePart = collider.gameObject.GetComponent<DestractablePart>();
 
         _isFreeFlight = false;
         _model.SetActive(false);
 
-        if (target != null)
+        if (destractablePart != null)
         {
-            target.ShatterTool.Shatter(transform.position, 1);
+            var target = destractablePart.Hit(transform.position);
             ObstacleHitted?.Invoke(target);
 
             StartCoroutine(ExplosionRoutine());
@@ -215,7 +248,12 @@ public class RocketControl : MonoBehaviour
             ObstacleHitted?.Invoke(null);
         }
 
-        _explosion.Play(true);
+        _flyAudio.Stop();
+        _explosion.Play(true); 
+        _explosionAudio.Play();
+
+        if (GameManager.Instance.HapticOn)
+            MMVibrationManager.Haptic(HapticTypes.HeavyImpact);
     }
 
     private IEnumerator ExplosionRoutine()
@@ -228,10 +266,10 @@ public class RocketControl : MonoBehaviour
         {
             if (col.attachedRigidbody != null)
             {
-                var shatter = col.GetComponent<ShatterTool>();
+                var part = col.GetComponent<DestractablePart>();
                 
-                if(shatter != null)
-                    shatter.Shatter(shatter.Center, 1);
+                if(part != null)
+                    part.Hit(part.transform.position);
             }
         }
 
@@ -243,10 +281,10 @@ public class RocketControl : MonoBehaviour
         {
             if (col.attachedRigidbody != null)
             {
-                var shatter = col.GetComponent<ShatterTool>();
+                var part = col.GetComponent<DestractablePart>();
 
-                if (shatter != null)
-                    shatter.Shatter(shatter.Center, 1);
+                if (part != null)
+                    part.Hit(part.transform.position);
             }
         }
 

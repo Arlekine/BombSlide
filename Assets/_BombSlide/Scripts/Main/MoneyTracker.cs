@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -16,6 +17,8 @@ public class MoneyTracker : MonoBehaviour
     private RocketControl _currentRocket;
     private Vector3 _startMovePoint;
     private bool _isTracking;
+
+    private Sequence _animation;
 
     private void Start()
     {
@@ -52,6 +55,16 @@ public class MoneyTracker : MonoBehaviour
             _targetDestractionText.text = $"For destruction: + {target.Cost} $!\nFor distance: + {distanceMoney} $!";
         else
             _targetDestractionText.text = $"For distance: + {distanceMoney} $!";
+
+        _targetDestractionText.transform.localScale = Vector3.zero;
+        var color = _targetDestractionText.color;
+        color.a = 0f;
+        _targetDestractionText.color = color;
+
+        _animation = DOTween.Sequence();
+
+        _animation.Append(_targetDestractionText.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBack));
+        _animation.Join(_targetDestractionText.DOFade(1f, 0.5f));
 
         GotMoney?.Invoke(distanceMoney + targetMoney);
     }

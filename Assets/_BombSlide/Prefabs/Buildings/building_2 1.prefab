@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4332244637488687768}
   - component: {fileID: 4707456803634104556}
   - component: {fileID: 8361012444325356246}
+  - component: {fileID: 3889920957234732328}
   m_Layer: 0
   m_Name: building_2 1
   m_TagString: Untagged
@@ -101,6 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cost: 100
+  _destractionReactions: []
+  _rigidbodies: []
 --- !u!54 &3104205912128271312
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -163,3 +166,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: {x: 100, y: 100}
+--- !u!114 &3889920957234732328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2800739500504000934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59840f7021310248963f79bcc8a8bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
