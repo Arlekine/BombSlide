@@ -1580,6 +1580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194227}
+  _canvas: {fileID: 109582858}
   _panel: {fileID: 783113264}
   _icon: {fileID: 783113263}
   _distanceText: {fileID: 809366694}

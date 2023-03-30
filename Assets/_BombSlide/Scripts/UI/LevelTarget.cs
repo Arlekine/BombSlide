@@ -10,6 +10,7 @@ public class LevelTarget : MonoBehaviour
     private const string DistanceTextFormat = "{0:0} m";
 
     [SerializeField] private Camera _camera;
+    [SerializeField] private Canvas _canvas;
     [SerializeField] private CanvasGroup _panel;
     [SerializeField] private RectTransform _icon;
     [SerializeField] private TextMeshProUGUI _distanceText;
@@ -28,7 +29,7 @@ public class LevelTarget : MonoBehaviour
 
     private void Update()
     {
-        _icon.anchoredPosition = _camera.WorldToScreenPoint(_target.transform.position);
+        _icon.anchoredPosition = _camera.WorldToScreenPoint(_target.transform.position) / _canvas.transform.localScale.x;
 
         var targetDistance = Vector3.Distance(_target.transform.position, _rocketControl.transform.position);
         _distanceText.text = String.Format(DistanceTextFormat, targetDistance);
