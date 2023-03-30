@@ -309,7 +309,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 6634767614422246172}
   _path: {fileID: 0}
   _startOffset: 1
-  _yOffset: 0.9
+  _yOffset: 0.15
   _pathSpeed: 140
   _movingCurve:
     serializedVersion: 2

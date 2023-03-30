@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -20,6 +21,8 @@ public class BoostButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void SetRocket(RocketControl rocket)
     {
         _rocketControl = rocket;
+        _rocketControl.FreeFlightStarted.AddListener(() => gameObject.SetActive(true));
+        _rocketControl.ObstacleHitted.AddListener((t) =>  gameObject.SetActive(false));
     }
 
     public void OnPointerDown(PointerEventData eventData)
