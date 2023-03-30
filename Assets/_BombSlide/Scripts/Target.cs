@@ -22,6 +22,7 @@ public class Target : MonoBehaviour
     [SerializeField] private int _cost;
     [SerializeField] private DestractionReaction[] _destractionReactions;
     [SerializeField] private RigidbodyPart[] _rigidbodies;
+    [SerializeField] private Collider[] _colliders;
     [SerializeField] private ParentConstraint[] _constraintsToDelete;
     [SerializeField] private PositionConstraint[] _positionsToDelete;
 
@@ -70,6 +71,11 @@ public class Target : MonoBehaviour
         foreach (var component in _positionsToDelete)
         {
             Destroy(component);
+        }
+
+        foreach (var collider in _colliders)
+        {
+            collider.enabled = true;
         }
     }
 }
