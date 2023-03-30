@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rocket: {fileID: 0}
   _transitionLerpParameter: 0.5
-  _moveToTrackPositionOffset: 3
+  _moveToTrackPositionOffset: 2.5
   _initialPos: {fileID: 3246728663449049240}
   _sideViewPos: {fileID: 3246728661440163451}
   _trackPos: {fileID: 3246728663065144849}
@@ -176,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3246728663065144848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: -18}
+  m_LocalPosition: {x: 0, y: 15, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
