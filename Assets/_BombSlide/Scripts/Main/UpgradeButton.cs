@@ -30,7 +30,7 @@ public class UpgradeButton : MonoBehaviour
         _currentCostInteration++;
         var oldCost = _currentCost;
         _currentCost = ProgressionData.Instance.BaseUpgradeCost + ProgressionData.Instance.AdditionalUpgradeCost * _currentCostInteration;
-        _cost.text = $"{_currentCost} $";
+        _cost.text = _currentCost.ToString();
 
         Clicked?.Invoke(oldCost, _currentCostInteration);
 
@@ -42,7 +42,7 @@ public class UpgradeButton : MonoBehaviour
     {
         _currentCostInteration = interation;
         _currentCost = ProgressionData.Instance.BaseUpgradeCost + ProgressionData.Instance.AdditionalUpgradeCost * _currentCostInteration;
-        _cost.text = $"{_currentCost} $";
+        _cost.text = _currentCost.ToString();
     }
 
     public void SetCurrentMoney(int currentMoney)

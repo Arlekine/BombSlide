@@ -222,7 +222,7 @@ public class RocketControl : MonoBehaviour
             var position = _rigidbody.position + forwardVector;
             position -= gravityVector;
 
-            print("for " + (forwardVector + gravityVector));
+            //print("for " + (forwardVector + gravityVector));
 
             var rotation = Quaternion.Lerp(_rigidbody.rotation, Quaternion.LookRotation(forwardVector + Vector3.right * (_targetXPos - position.x) / (Mathf.Sqrt(gravityVector.y) * 0.75f) - gravityVector), 4f * Time.deltaTime);
 
