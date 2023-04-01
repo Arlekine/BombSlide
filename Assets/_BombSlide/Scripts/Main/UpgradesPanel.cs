@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,11 +14,10 @@ public class UpgradesPanel : MonoBehaviour
     [SerializeField] private UpgradeButton _boostUpgrade;
     [SerializeField] private UpgradeButton _explosionUpgrade;
 
-    [Space] 
-    [SerializeField] private float _speedForUpgrade;
-    [SerializeField] private float _boostForUpgrade;
-    [SerializeField] private float _explosionForceForUpgrade;
-    [SerializeField] private float _explosionRadiusForUpgrade;
+    [Header("Tutorial")] 
+    [SerializeField] private GameObject _speedUpgradeTutorial;
+    [SerializeField] private GameObject _boostUpgradeTutorial;
+    [SerializeField] private GameObject _explosionUpgradeTutorial;
 
     private void Awake()
     {
@@ -26,19 +26,40 @@ public class UpgradesPanel : MonoBehaviour
         _explosionUpgrade.Clicked.AddListener(UpgradeExplosion);
     }
 
+    public void StartTutorial()
+    {
+        _speedUpgradeTutorial.SetActive(true);
+    }
+
     private void UpgradeSpeed(int cost, int costInteration)
     {
-        SpeedUpgraded?.Invoke(_speedForUpgrade, cost, costInteration);
+        if (GameManager.Instance.IsTutorial)
+        {
+            _speedUpgradeTutorial.SetActive(false);
+        _boostUpgradeTutorial.SetActive(true);
+        }
+
+        SpeedUpgraded?.Invoke(ProgressionData.Instance.SpeedForUpgrade, cost, costInteration);
     }
 
     private void UpgradeBoost(int cost, int costInteration)
     {
-        BoostUpgraded?.Invoke(_boostForUpgrade, cost, costInteration);
+        if (GameManager.Instance.IsTutorial)
+        {
+            _boostUpgradeTutorial.SetActive(false);
+            _explosionUpgradeTutorial.SetActive(true);
+        }
+
+        BoostUpgraded?.Invoke(ProgressionData.Instance.BoostForUpgrade, cost, costInteration);
     }
     
     private void UpgradeExplosion(int cost, int costInteration)
     {
-        ExplosionUpgraded?.Invoke(_explosionRadiusForUpgrade, _explosionForceForUpgrade, cost, costInteration);
+        if (GameManager.Instance.IsTutorial)
+            _explosionUpgradeTutorial.SetActive(false);
+        ExplosionUpgraded?.Invoke(ProgressionData.Instance.ExplosionRadiusForUpgrade, ProgressionData.Instance.ExplosionForceForUpgrade, cost, costInteration);
+
+        GameManager.Instance.EndTutorial();
     }
 
     public void SetData(int speedInterations, int boostInterations, int explosionInterations)

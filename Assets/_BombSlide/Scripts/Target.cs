@@ -19,7 +19,6 @@ public class Target : MonoBehaviour
         }
     }
 
-    [SerializeField] private int _cost;
     [SerializeField] private DestractionReaction[] _destractionReactions;
     [SerializeField] private RigidbodyPart[] _rigidbodies;
     [SerializeField] private Collider[] _colliders;
@@ -28,8 +27,6 @@ public class Target : MonoBehaviour
 
     private DestractablePart[] _destractableParts;
     private bool _isDestroyed;
-
-    public int Cost => _cost;
 
     private void Start()
     {

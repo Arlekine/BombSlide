@@ -73,9 +73,11 @@ public class CameraControl : MonoBehaviour
 
     private void MoveToHitPosition(Target target)
     {
+        _transitionLerpParameter = 0.75f;
         _camera.SpeedEffect.gameObject.SetActive(false);
         _camera.Shaker.Shake(0.05f);
         _camera.transform.parent = _hitPos;
+        _hitPos.DOMove(_hitPos.position + _hitPos.forward * 75f, 10f);
     }
 
     private void Update()

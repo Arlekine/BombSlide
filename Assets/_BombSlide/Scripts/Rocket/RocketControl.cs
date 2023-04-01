@@ -13,6 +13,7 @@ public class RocketControl : MonoBehaviour
 {
     public UnityEvent MovingStarted;
     public UnityEvent FreeFlightStarted;
+    public UnityEvent BoostEnergyEnded;
     public UnityEvent<Target> ObstacleHitted;
 
     public UnityEvent BoostStart;
@@ -73,6 +74,8 @@ public class RocketControl : MonoBehaviour
 
     private float CurrentForwardSpeed => _isBoosting ? _outputSpeed * _boostSpeedModifier : _outputSpeed;
     public float CurrentBoostNormalized => _currentBoostEnergy / _maxBoostEnergy;
+    public bool HasBoost => _currentBoostEnergy > 0;
+    public bool IsMovingHorizontally;
 
     private IEnumerator Start()
     {
@@ -93,6 +96,7 @@ public class RocketControl : MonoBehaviour
     public void AddBoost(float boost)
     {
         _currentBoostEnergy += boost;
+        _maxBoostEnergy += boost;
     }
 
     public void AddExplosion(float radius, float force)
@@ -218,7 +222,9 @@ public class RocketControl : MonoBehaviour
             var position = _rigidbody.position + forwardVector;
             position -= gravityVector;
 
-            var rotation = Quaternion.Lerp(_rigidbody.rotation, Quaternion.LookRotation(forwardVector + Vector3.right * (_targetXPos - position.x) * 5f - gravityVector), 4f * Time.deltaTime);
+            print("for " + (forwardVector + gravityVector));
+
+            var rotation = Quaternion.Lerp(_rigidbody.rotation, Quaternion.LookRotation(forwardVector + Vector3.right * (_targetXPos - position.x) / (Mathf.Sqrt(gravityVector.y) * 0.75f) - gravityVector), 4f * Time.deltaTime);
 
             position.x = _targetXPos;
             _rigidbody.MovePosition(position);
@@ -312,6 +318,7 @@ public class RocketControl : MonoBehaviour
 
         _isBoosting = false;
         _boostRoutine = null;
+        BoostEnergyEnded?.Invoke();
     }
 
     private float GetVerticalSpeed(float flightTime)

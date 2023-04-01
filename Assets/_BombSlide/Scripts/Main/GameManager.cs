@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -18,16 +19,24 @@ public class GameManager : Singletone<GameManager>
     [SerializeField] private BoostButton _boostButton;
     [SerializeField] private CurrentEnergyView _energyView;
     [SerializeField] private TextMeshProUGUI _currentMoney;
+    [SerializeField] private TextMeshProUGUI _levelPassText;
     [SerializeField] private SwitchButton _hapticButton;
     [SerializeField] private SwitchButton _soundButton;
+
+    [Header("Tutorial")] 
+    [SerializeField] private FlightTutorial _flightTutorial;
 
     [Space] 
     [SerializeField] private float _timeBeforeLevelRestart;
 
     private GameData _gameData;
     private Level _currentLevel;
+    private Sequence _levelPassAnimation;
 
     public bool HapticOn => _gameData.HapticOn;
+    public int CompletedLevels => _gameData.CompletedLevels;
+    public bool IsTutorial => _gameData.IsTutorial;
+    public bool IsUpgradesTutorial;
 
     private void Awake()
     {
@@ -38,6 +47,7 @@ public class GameManager : Singletone<GameManager>
         else
         {
             _gameData = new GameData();
+            _gameData.CurrentMoney = ProgressionData.Instance.StartMoney;
             SaveData();
         }
 
@@ -68,6 +78,27 @@ public class GameManager : Singletone<GameManager>
 
         _soundButton.OnSwitch += HapticSwitch;
         _soundButton.OnSwitch += SoundSwitch;
+
+        _startScreen.gameObject.SetActive(true);
+    }
+
+    public void EndTutorial()
+    {
+        IsUpgradesTutorial = false;
+        _gameData.IsTutorial = false;
+        SaveData();
+    }
+
+    [EditorButton]
+    public void Add1000Money()
+    {
+        UpdateCurrentMoney(1000);
+        _upgrades.UpdateButtonsInteractivity(_gameData.CurrentMoney);
+    }
+
+    public bool IsMainTarget(Target target)
+    {
+        return target == _currentLevel.TargetToPass;
     }
 
     public void HapticSwitch(bool isActive)
@@ -87,7 +118,7 @@ public class GameManager : Singletone<GameManager>
     {
         _gameData.CurrentMoney += newMoney;
         SaveData();
-        _currentMoney.text = $"{_gameData.CurrentMoney} $";
+        _currentMoney.text = $"{_gameData.CurrentMoney}";
     }
 
     private void UpgradeSpeed(float speed, int cost, int interations)
@@ -96,7 +127,7 @@ public class GameManager : Singletone<GameManager>
         _gameData.CurrentMoney -= cost;
         _gameData.AdditionalSpeed += speed;
 
-        _currentMoney.text = $"{_gameData.CurrentMoney} $";
+        _currentMoney.text = $"{_gameData.CurrentMoney}";
 
         SaveData();
         
@@ -112,7 +143,7 @@ public class GameManager : Singletone<GameManager>
         _gameData.CurrentMoney -= cost;
         _gameData.AdditionalBoost += boost;
 
-        _currentMoney.text = $"{_gameData.CurrentMoney} $";
+        _currentMoney.text = $"{_gameData.CurrentMoney}";
 
         SaveData();
 
@@ -129,7 +160,7 @@ public class GameManager : Singletone<GameManager>
         _gameData.AdditionalExplosionForce += explosionForce;
         _gameData.AdditionalExplosionRadius += explosionRadius;
 
-        _currentMoney.text = $"{_gameData.CurrentMoney} $";
+        _currentMoney.text = $"{_gameData.CurrentMoney}";
 
         SaveData();
 
@@ -163,6 +194,14 @@ public class GameManager : Singletone<GameManager>
         _moneyTracker.SetRocket(_currentLevel.RocketControl);
         _energyView.SetRocket(_currentLevel.RocketControl); 
         _boostButton.SetRocket(_currentLevel.RocketControl);
+
+        if (IsTutorial)
+        {
+            if (IsUpgradesTutorial)
+                _upgrades.StartTutorial();
+            else
+                _flightTutorial.SetRocket(_currentLevel.RocketControl);
+        }
     }
 
     private void SaveData()
@@ -185,9 +224,15 @@ public class GameManager : Singletone<GameManager>
             _gameData.AdditionalBoost = 0;
             _gameData.AdditionalExplosionForce = 0;
             _gameData.AdditionalExplosionRadius = 0;
+            _gameData.CompletedLevels++;
 
             if (_gameData.CurrentLevel >= _levels.Length)
                 _gameData.CurrentLevel = 0;
+            
+            _levelPassAnimation = DOTween.Sequence();
+
+            _levelPassAnimation.Append(_levelPassText.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBack));
+            _levelPassAnimation.Join(_levelPassText.DOFade(1f, 0.5f));
 
             SaveData();
         }
@@ -201,6 +246,7 @@ public class GameManager : Singletone<GameManager>
 
         _fade.FadeIn(() =>
         {
+            _levelPassText.DOFade(0f, 0f);
             _camera.Camera.fieldOfView = 40f;
             _camera.SpeedEffect.gameObject.SetActive(false);
             OpenLevel(_levels[_gameData.CurrentLevel]);
@@ -213,7 +259,9 @@ public class GameManager : Singletone<GameManager>
 public class GameData
 {
     public int CurrentLevel;
+    public int CompletedLevels;
     public int CurrentMoney;
+    public bool IsTutorial = true;
 
     public bool SoundOn = true;
     public bool HapticOn = true;

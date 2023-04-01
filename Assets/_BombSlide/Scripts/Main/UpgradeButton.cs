@@ -10,8 +10,6 @@ public class UpgradeButton : MonoBehaviour
 
     [SerializeField] private Button _button;
     [SerializeField] private TextMeshProUGUI _cost;
-    [SerializeField] private int _baseCost;
-    [SerializeField] private int _additionalCostForIteration;
 
     private int _currentCost;
     private int _currentCostInteration;
@@ -19,7 +17,7 @@ public class UpgradeButton : MonoBehaviour
     private void Awake()
     {
         _button.onClick.AddListener(InvokeClick);
-        _currentCost = _baseCost;
+        _currentCost = ProgressionData.Instance.BaseUpgradeCost;
     }
 
     private void OnDestroy()
@@ -30,11 +28,11 @@ public class UpgradeButton : MonoBehaviour
     private void InvokeClick()
     {
         _currentCostInteration++;
-
-        Clicked?.Invoke(_currentCost, _currentCostInteration);
-
-        _currentCost = _baseCost + _additionalCostForIteration * _currentCostInteration;
+        var oldCost = _currentCost;
+        _currentCost = ProgressionData.Instance.BaseUpgradeCost + ProgressionData.Instance.AdditionalUpgradeCost * _currentCostInteration;
         _cost.text = $"{_currentCost} $";
+
+        Clicked?.Invoke(oldCost, _currentCostInteration);
 
         if (GameManager.Instance.HapticOn)
             MMVibrationManager.Haptic(HapticTypes.LightImpact);
@@ -43,7 +41,7 @@ public class UpgradeButton : MonoBehaviour
     public void SetCurrentCostIteration(int interation)
     {
         _currentCostInteration = interation;
-        _currentCost = _baseCost + _additionalCostForIteration * _currentCostInteration;
+        _currentCost = ProgressionData.Instance.BaseUpgradeCost + ProgressionData.Instance.AdditionalUpgradeCost * _currentCostInteration;
         _cost.text = $"{_currentCost} $";
     }
 
