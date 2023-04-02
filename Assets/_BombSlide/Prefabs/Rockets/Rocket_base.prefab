@@ -173,6 +173,9 @@ MonoBehaviour:
   FreeFlightStarted:
     m_PersistentCalls:
       m_Calls: []
+  BoostEnergyEnded:
+    m_PersistentCalls:
+      m_Calls: []
   ObstacleHitted:
     m_PersistentCalls:
       m_Calls: []
@@ -188,7 +191,7 @@ MonoBehaviour:
   _cameraControl: {fileID: 0}
   _outputSpeed: 140
   _gravity: 9
-  _horizontalMoveLerpParameter: 15
+  _horizontalSpeed: 6
   _minX: -3
   _maxX: 3
   _boostSpeedModifier: 1.5
@@ -208,6 +211,7 @@ MonoBehaviour:
   _soundStartingTime: 8
   _defaultVolume: 0.3
   _boostVolume: 0.6
+  IsMovingHorizontally: 0
 --- !u!114 &6030308054397908845
 MonoBehaviour:
   m_ObjectHideFlags: 0

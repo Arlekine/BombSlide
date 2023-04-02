@@ -29,7 +29,7 @@ public class RocketControl : MonoBehaviour
     [SerializeField] private float _gravity;
 
     [Header("Horizontal Move")]
-    [SerializeField] private float _horizontalMoveLerpParameter;
+    [SerializeField] private float _horizontalSpeed;
     [SerializeField] private float _minX;
     [SerializeField] private float _maxX;
 
@@ -212,7 +212,7 @@ public class RocketControl : MonoBehaviour
 
             if (fingers.Count > 0)
             {
-                _targetXPos = Mathf.Lerp(_targetXPos, fingers[0].GetLastWorldPosition(_cameraControl.CameraDistance).x, _horizontalMoveLerpParameter * Time.deltaTime);
+                _targetXPos += fingers[0].ScaledDelta.normalized.x * _horizontalSpeed * Time.deltaTime;
                 _targetXPos = Mathf.Clamp(_targetXPos, _minX, _maxX);
             }
 

@@ -274,7 +274,7 @@ MonoBehaviour:
   _cameraControl: {fileID: 0}
   _outputSpeed: 140
   _gravity: 9
-  _horizontalMoveLerpParameter: 15
+  _horizontalSpeed: 6
   _minX: -3
   _maxX: 3
   _boostSpeedModifier: 1.5
